@@ -60,13 +60,13 @@ jobs:
       #     GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
       #     # GitHub sets this automatically
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # -
-      #   name: Builder
-      #   uses: wangyoucao577/go-release-action@v1.33 
-      #   with:
-      #     github_token: ${{ secrets.GH_ASSET_TOKEN }}
-      #     goos: linux
-      #     goarch: amd64
-      #     project_path: "cmd"
-      #     asset_name: renymize-linux-amd64
-      #     goversion: 1.19
+      -
+        name: Builder
+        uses: wangyoucao577/go-release-action@v1.33 
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: linux
+          goarch: amd64
+          project_path: "cmd"
+          asset_name: renymize-linux-amd64
+          goversion: 1.19
