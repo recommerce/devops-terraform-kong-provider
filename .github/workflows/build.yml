@@ -1,8 +1,11 @@
 name: gokong build
 on:
   push:
-    branches: [ master ]
-  pull_request:
+    branches:
+      - develop
+      - stage
+      - master
+
 jobs:
   build:
     name: building gokong
